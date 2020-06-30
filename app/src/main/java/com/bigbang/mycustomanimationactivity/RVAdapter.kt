@@ -7,7 +7,7 @@ import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.rv_item.view.*
 
-class RVAdapter(var list: List<String>) : RecyclerView.Adapter<RVAdapter.ItemViewHolder>() {
+class RVAdapter(var list: MutableList<String>) : RecyclerView.Adapter<RVAdapter.ItemViewHolder>() {
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

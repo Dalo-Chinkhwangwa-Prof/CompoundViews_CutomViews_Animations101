@@ -2,6 +2,7 @@ package com.bigbang.mycustomanimationactivity
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
@@ -26,6 +27,8 @@ class PersonCompoundView(context: Context, attributeSet: AttributeSet) :
 
     init {
 
+        Log.d("TAG_X", "Person init  ${this.toString()} $context")
+
         val layoutInflater: LayoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         layoutInflater.inflate(R.layout.user_view_layout, this, true)
@@ -48,6 +51,12 @@ class PersonCompoundView(context: Context, attributeSet: AttributeSet) :
         buttonB = this.findViewById(R.id.second_button)
 
         setUpView()
+    }
+
+
+    fun setPersonNameText(personName: String) {
+        this.personName = personName
+        personNameTextView.text = personName
     }
 
 
